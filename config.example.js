@@ -1,9 +1,12 @@
 const PAYLINK_CONFIG = {
-  wallet: "",
-  contactNote: "After payment, send your transaction hash to the seller using their preferred contact method.",
+  wallet: "0xYOUR_WALLET_ADDRESS_HERE",
+  contactNote: "After payment, open a GitHub Issue with your transaction hash, the wallet you want on your page, and your email or Telegram.",
+  githubIssues: "https://github.com/YOUR_USER/YOUR_REPO/issues/new",
   services: {
-    paymentPage: { title: "USDT payment page setup", amount: 10 },
-    landing: { title: "Simple landing page", amount: 25 },
-    metamask: { title: "MetaMask setup + walkthrough", amount: 10 },
+    paymentPage: {
+      title: "Custom USDT payment page",
+      amount: 10,
+      slug: "payment-page-setup",
+    },
   },
 };
