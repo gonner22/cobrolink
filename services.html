@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services — Pay in USDT</title>
-  <meta name="description" content="Digital micro-services paid in USDT (ERC20). From 10 USDT.">
+  <title>Pay 10 USDT — Custom USDT Payment Page | PayLink</title>
+  <meta name="description" content="Pay 10 USDT for a custom USDT payment page. Delivered in 24h. Direct wallet payment, no middleman.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,77 +16,84 @@
   <header class="site-header">
     <a href="index.html" class="logo">Pay<span>Link</span></a>
     <nav>
-      <a href="index.html">Tool</a>
-      <a href="#services" class="nav-cta">Hire</a>
+      <a href="index.html">Free tool</a>
+      <a id="sticky-pay" class="nav-cta" href="#">Pay 10 USDT</a>
     </nav>
   </header>
 
   <main>
     <section class="hero hero-compact">
-      <p class="eyebrow">Freelance · Crypto payments</p>
-      <h1>Digital work, <em>paid in USDT</em></h1>
-      <p class="hero-sub">No PayPal, no bank. Pay from MetaMask and receive delivery in 24–48h.</p>
+      <p class="eyebrow">One product · One price · 24h delivery</p>
+      <h1>Pay <em>10 USDT</em>. Get a payment page that actually works.</h1>
+      <p class="hero-sub">Your clients stop sending USDT on the wrong network. You get a branded link + QR code you can share anywhere.</p>
+      <a id="hero-pay" class="btn btn-primary" href="#">Pay 10 USDT now</a>
     </section>
 
-    <section id="services" class="services">
-      <article class="service-card featured">
-        <div class="service-header">
-          <h2>USDT payment page setup</h2>
-          <p class="service-price">10 <small>USDT</small></p>
-        </div>
-        <p>A professional page to collect USDT (ERC20) from your clients. Includes a shareable link and QR code.</p>
-        <ul>
-          <li>Customized with your wallet</li>
-          <li>Client-friendly copy</li>
-          <li>24h delivery</li>
-        </ul>
-        <a id="pay-service-1" class="btn btn-primary btn-full" href="#">Pay 10 USDT</a>
-      </article>
+    <section class="offer-detail">
+      <div class="offer-box">
+        <h2>What you're paying for</h2>
+        <p class="section-lead">This is a one-time purchase. Not a donation. Not a subscription. A delivered product.</p>
 
-      <article class="service-card">
-        <div class="service-header">
-          <h2>Simple landing page</h2>
-          <p class="service-price">25 <small>USDT</small></p>
+        <div class="deliverables">
+          <h3>Deliverables (included in 10 USDT)</h3>
+          <ul class="check-list">
+            <li>Custom payment page with <strong>your wallet address</strong></li>
+            <li>Your service / business name on the page</li>
+            <li>QR code for mobile wallets</li>
+            <li>Clear “ERC20 only” warnings for clients</li>
+            <li>Shareable URL you can send on WhatsApp, Telegram, email</li>
+            <li>Delivered within <strong>24 hours</strong> of confirmed payment</li>
+          </ul>
         </div>
-        <p>A single-section page for your project, portfolio, or service. Responsive, ready for Vercel or Netlify.</p>
-        <ul>
-          <li>Clean, modern design</li>
-          <li>Deploy included (your free account)</li>
-          <li>One round of revisions</li>
-        </ul>
-        <a id="pay-service-2" class="btn btn-secondary btn-full" href="#">Pay 25 USDT</a>
-      </article>
 
-      <article class="service-card">
-        <div class="service-header">
-          <h2>MetaMask setup + walkthrough</h2>
-          <p class="service-price">10 <small>USDT</small></p>
+        <div class="price-box">
+          <span class="price-label">Total price</span>
+          <span class="price-amount">10 USDT</span>
+          <span class="price-note">Ethereum mainnet · ERC20 only · no hidden fees</span>
+          <a id="pay-service-1" class="btn btn-primary btn-full" href="#">Pay 10 USDT →</a>
         </div>
-        <p>Guided video call or chat: install a wallet, add the right network, receive USDT without network mistakes.</p>
-        <ul>
-          <li>30-minute session</li>
-          <li>Checklist PDF included</li>
-          <li>48h post-session support</li>
-        </ul>
-        <a id="pay-service-3" class="btn btn-secondary btn-full" href="#">Pay 10 USDT</a>
-      </article>
-    </section>
-
-    <section class="how-it-works">
-      <h2>How it works</h2>
-      <div class="steps-row">
-        <div><span>1</span><p>Pick a service and click pay</p></div>
-        <div><span>2</span><p>Send USDT (ERC20) from your wallet</p></div>
-        <div><span>3</span><p>Share your transaction hash with the seller</p></div>
-        <div><span>4</span><p>Receive delivery in 24–48h</p></div>
       </div>
-      <p id="contact-note" class="contact-note"></p>
-      <p class="edit-hint">✎ Set your wallet and contact note in <code>config.js</code> before publishing.</p>
+
+      <div class="flow-box">
+        <h3>Step by step — from payment to delivery</h3>
+        <ol class="flow-list numbered-detail">
+          <li>
+            <strong>Click “Pay 10 USDT”</strong>
+            <span>You land on a payment page showing the exact amount and wallet address.</span>
+          </li>
+          <li>
+            <strong>Send 10 USDT from MetaMask</strong>
+            <span>Use USDT on <strong>Ethereum (ERC20)</strong>. The seller receives it immediately — no escrow, no platform holding your money.</span>
+          </li>
+          <li>
+            <strong>Confirm your order</strong>
+            <span id="contact-note" class="contact-inline"></span>
+          </li>
+          <li>
+            <strong>Receive your custom page</strong>
+            <span>Within 24 hours you get a live link ready to send to your own clients.</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="faq-box">
+        <h3>Common questions</h3>
+        <dl class="faq-list">
+          <dt>Why pay if the generator is free?</dt>
+          <dd>The free tool is DIY. The paid service is done-for-you: your branding, your wallet, optimized copy, and no setup work on your end.</dd>
+          <dt>Where does my money go?</dt>
+          <dd>Directly to the seller's Ethereum wallet. PayLink is non-custodial — it never holds funds.</dd>
+          <dt>What if I need changes?</dt>
+          <dd>One round of text/wallet updates is included. Reply on your order with what to change.</dd>
+          <dt>Is the free tool still free?</dt>
+          <dd>Yes. <a href="index.html#generator">Use the generator</a> anytime at zero cost.</dd>
+        </dl>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>Direct wallet payment · No intermediaries · ERC20 only</p>
+    <p>10 USDT · one-time payment · ERC20 · delivered in 24h</p>
   </footer>
 
   <script src="config.js"></script>

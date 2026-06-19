@@ -1,9 +1,13 @@
+const DEFAULT_WALLET = "0x684c0ec0a2dbabC5ee2840396Ec98ba4E64D546d";
+
 const form = document.getElementById("payment-form");
 const result = document.getElementById("result");
 const shareUrl = document.getElementById("share-url");
 const previewLink = document.getElementById("preview-link");
 const copyBtn = document.getElementById("copy-link");
 const addressInput = document.getElementById("address");
+
+addressInput.value = DEFAULT_WALLET;
 
 function buildPayUrl({ title, description, amount, address }) {
   const params = new URLSearchParams({
@@ -41,3 +45,16 @@ copyBtn.addEventListener("click", async () => {
   copyBtn.textContent = "Copied!";
   setTimeout(() => { copyBtn.textContent = "Copy"; }, 2000);
 });
+
+const cfg = typeof PAYLINK_CONFIG !== "undefined" ? PAYLINK_CONFIG : null;
+const offerPay = document.getElementById("offer-pay");
+if (offerPay && cfg?.wallet && cfg.services?.paymentPage) {
+  const s = cfg.services.paymentPage;
+  const params = new URLSearchParams({
+    t: s.title,
+    a: s.amount,
+    w: cfg.wallet,
+    d: cfg.contactNote,
+  });
+  offerPay.href = `pay.html?${params}`;
+}

@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PayLink — USDT payment page in 30 seconds</title>
-  <meta name="description" content="Create professional USDT (ERC20) payment links. Free, no signup, ready to share.">
-  <meta property="og:title" content="PayLink — Get paid in USDT with a link">
-  <meta property="og:description" content="Free USDT (ERC20) payment page generator. No signup required.">
+  <title>PayLink — Free USDT links + paid setup from 10 USDT</title>
+  <meta name="description" content="Free USDT payment link generator. Or pay 10 USDT for a done-for-you custom payment page in 24h.">
+  <meta property="og:title" content="PayLink — Get paid in USDT">
+  <meta property="og:description" content="Free tool + paid setup service. 10 USDT for a custom payment page.">
   <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
 </head>
 <body>
   <div class="grain"></div>
@@ -19,30 +20,88 @@
   <header class="site-header">
     <a href="index.html" class="logo">Pay<span>Link</span></a>
     <nav>
-      <a href="services.html">Services</a>
-      <a href="#generator" class="nav-cta">Create link</a>
+      <a href="services.html">Paid setup</a>
+      <a href="#generator" class="nav-cta">Free tool</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <p class="eyebrow">No bank required · ERC20</p>
-      <h1>Get paid in USDT with a link that <em>looks professional</em></h1>
-      <p class="hero-sub">Build a payment page in seconds. Share it on chat, email, or social. Your client scans the QR and pays.</p>
+      <p class="eyebrow">Two ways to use PayLink</p>
+      <h1>Free tool for everyone. <em>Paid setup</em> if you want it done for you.</h1>
+      <p class="hero-sub">Use the generator free, forever. Or pay <strong>10 USDT</strong> and get a custom payment page built and delivered in 24 hours.</p>
       <div class="hero-actions">
-        <a href="#generator" class="btn btn-primary">Create my free link</a>
-        <a href="services.html" class="btn btn-ghost">Services from 10 USDT</a>
+        <a id="offer-pay" class="btn btn-primary" href="services.html">Pay 10 USDT — get my page</a>
+        <a href="#generator" class="btn btn-ghost">Use free generator</a>
       </div>
-      <div class="hero-stats">
-        <div><strong>$0</strong><span>startup cost</span></div>
-        <div><strong>30s</strong><span>to publish</span></div>
-        <div><strong>USDT</strong><span>Ethereum mainnet</span></div>
+    </section>
+
+    <section class="money-model">
+      <h2>How the paid service works</h2>
+      <p class="section-lead">This is a simple product sale — not a subscription, not a middleman. You pay once, you get a deliverable.</p>
+
+      <div class="model-grid">
+        <article class="model-card">
+          <span class="model-step">You buy</span>
+          <h3>Custom payment page setup</h3>
+          <p class="model-price">10 USDT</p>
+          <p>I configure a payment page with <strong>your</strong> wallet, <strong>your</strong> service name, and client-ready ERC20 instructions.</p>
+        </article>
+        <article class="model-card">
+          <span class="model-step">You pay via</span>
+          <h3>Direct crypto transfer</h3>
+          <p class="model-price">MetaMask → ERC20</p>
+          <p>USDT goes straight to the seller's wallet on Ethereum. No PayPal, no platform fees, no custody.</p>
+        </article>
+        <article class="model-card">
+          <span class="model-step">You receive</span>
+          <h3>Live payment link + QR</h3>
+          <p class="model-price">Within 24h</p>
+          <p>A shareable link you send to clients. They open it, scan QR, pay you in USDT on the correct network.</p>
+        </article>
+      </div>
+
+      <div class="flow-box">
+        <h3>Money flow (10 USDT service)</h3>
+        <ol class="flow-list">
+          <li><strong>Buyer</strong> clicks “Pay 10 USDT” on the services page</li>
+          <li><strong>Buyer</strong> sends 10 USDT (ERC20) from MetaMask to the payment address shown</li>
+          <li><strong>Seller</strong> receives USDT instantly in their wallet</li>
+          <li><strong>Buyer</strong> submits transaction hash + their wallet via GitHub Issue</li>
+          <li><strong>Seller</strong> delivers custom payment page within 24 hours</li>
+        </ol>
+      </div>
+
+      <div class="compare-box">
+        <h3>Free vs paid — what's the difference?</h3>
+        <div class="compare-grid">
+          <div>
+            <h4>Free generator</h4>
+            <ul>
+              <li>Build links yourself</li>
+              <li>Generic PayLink branding</li>
+              <li>You host / share the URL</li>
+              <li>Cost: $0</li>
+            </ul>
+          </div>
+          <div class="compare-paid">
+            <h4>Paid setup — 10 USDT</h4>
+            <ul>
+              <li>I build it for you</li>
+              <li>Your wallet + your service title</li>
+              <li>Optimized copy so clients don't use wrong network</li>
+              <li>Delivered in 24h</li>
+            </ul>
+            <a href="services.html" class="btn btn-primary">See paid offer →</a>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="generator" class="generator">
       <div class="generator-card">
-        <h2>Payment link generator</h2>
+        <h2>Free payment link generator</h2>
+        <p class="generator-note">No payment required. Create and share links at zero cost.</p>
         <form id="payment-form">
           <label>
             <span>Payment title</span>
@@ -79,41 +138,12 @@
           <button type="button" id="copy-link" class="btn btn-secondary">Copy</button>
         </div>
         <a id="preview-link" href="#" target="_blank" class="btn btn-ghost">Open preview →</a>
-        <div class="share-tips">
-          <h3>How to land your first payment</h3>
-          <ol>
-            <li>Post your link on <strong>r/slavelabour</strong> or <strong>r/forhire</strong> with a specific micro-task.</li>
-            <li>Share in freelance or crypto communities on Telegram or Discord.</li>
-            <li>Offer something concrete: “Simple landing page in 24h — 10 USDT”.</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section class="ideas">
-      <h2>Ideas to earn your first 10 USDT</h2>
-      <div class="idea-grid">
-        <article>
-          <span class="idea-tag">Fast</span>
-          <h3>Micro-gig on Reddit</h3>
-          <p>Translation, resume review, MetaMask setup, Vercel deploy. Fixed price: 10 USDT.</p>
-        </article>
-        <article>
-          <span class="idea-tag">Repeat</span>
-          <h3>Payment pages for others</h3>
-          <p>Charge 10–25 USDT to set up a custom PayLink page for crypto freelancers.</p>
-        </article>
-        <article>
-          <span class="idea-tag">Scale</span>
-          <h3>Template + guide</h3>
-          <p>Sell a Notion/PDF pack: “How to get paid in USDT without PayPal”.</p>
-        </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>PayLink · Free tool · Non-custodial · Link generator only</p>
+    <p>PayLink · Free generator · Paid setup from 10 USDT · Non-custodial</p>
   </footer>
 
   <script src="app.js"></script>
