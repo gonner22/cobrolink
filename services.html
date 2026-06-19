@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Pay in USDT</title>
+  <meta name="description" content="Digital micro-services paid in USDT (ERC20). From 10 USDT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">Pay<span>Link</span></a>
+    <nav>
+      <a href="index.html">Tool</a>
+      <a href="#services" class="nav-cta">Hire</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero-compact">
+      <p class="eyebrow">Freelance · Crypto payments</p>
+      <h1>Digital work, <em>paid in USDT</em></h1>
+      <p class="hero-sub">No PayPal, no bank. Pay from MetaMask and receive delivery in 24–48h.</p>
+    </section>
+
+    <section id="services" class="services">
+      <article class="service-card featured">
+        <div class="service-header">
+          <h2>USDT payment page setup</h2>
+          <p class="service-price">10 <small>USDT</small></p>
+        </div>
+        <p>A professional page to collect USDT (ERC20) from your clients. Includes a shareable link and QR code.</p>
+        <ul>
+          <li>Customized with your wallet</li>
+          <li>Client-friendly copy</li>
+          <li>24h delivery</li>
+        </ul>
+        <a id="pay-service-1" class="btn btn-primary btn-full" href="#">Pay 10 USDT</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-header">
+          <h2>Simple landing page</h2>
+          <p class="service-price">25 <small>USDT</small></p>
+        </div>
+        <p>A single-section page for your project, portfolio, or service. Responsive, ready for Vercel or Netlify.</p>
+        <ul>
+          <li>Clean, modern design</li>
+          <li>Deploy included (your free account)</li>
+          <li>One round of revisions</li>
+        </ul>
+        <a id="pay-service-2" class="btn btn-secondary btn-full" href="#">Pay 25 USDT</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-header">
+          <h2>MetaMask setup + walkthrough</h2>
+          <p class="service-price">10 <small>USDT</small></p>
+        </div>
+        <p>Guided video call or chat: install a wallet, add the right network, receive USDT without network mistakes.</p>
+        <ul>
+          <li>30-minute session</li>
+          <li>Checklist PDF included</li>
+          <li>48h post-session support</li>
+        </ul>
+        <a id="pay-service-3" class="btn btn-secondary btn-full" href="#">Pay 10 USDT</a>
+      </article>
+    </section>
+
+    <section class="how-it-works">
+      <h2>How it works</h2>
+      <div class="steps-row">
+        <div><span>1</span><p>Pick a service and click pay</p></div>
+        <div><span>2</span><p>Send USDT (ERC20) from your wallet</p></div>
+        <div><span>3</span><p>Share your transaction hash with the seller</p></div>
+        <div><span>4</span><p>Receive delivery in 24–48h</p></div>
+      </div>
+      <p id="contact-note" class="contact-note"></p>
+      <p class="edit-hint">✎ Set your wallet and contact note in <code>config.js</code> before publishing.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Direct wallet payment · No intermediaries · ERC20 only</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="services.js"></script>
+</body>
+</html>

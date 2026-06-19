@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment request — PayLink</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="pay-page">
+  <div class="grain"></div>
+
+  <main class="pay-main">
+    <div id="pay-card" class="pay-card">
+      <p class="pay-badge">Payment request</p>
+      <h1 id="pay-title">Loading…</h1>
+      <p id="pay-description" class="pay-description hidden"></p>
+
+      <div class="pay-amount-block">
+        <span class="pay-amount-label">Amount due</span>
+        <div class="pay-amount">
+          <span id="pay-amount">—</span>
+          <span class="pay-currency">USDT</span>
+        </div>
+        <span class="pay-network">Ethereum network · ERC20</span>
+      </div>
+
+      <div class="qr-wrap">
+        <img id="qr-code" alt="Payment address QR code" width="200" height="200">
+      </div>
+
+      <div class="address-block">
+        <span>Destination address</span>
+        <code id="pay-address">—</code>
+        <button type="button" id="copy-address" class="btn btn-secondary btn-full">Copy address</button>
+      </div>
+
+      <div class="pay-steps">
+        <h2>Instructions</h2>
+        <ol>
+          <li>Open MetaMask or any Ethereum-compatible wallet.</li>
+          <li>Select <strong>USDT (ERC20)</strong> — not TRC20, BEP20, or other networks.</li>
+          <li>Send the exact amount shown to the address above.</li>
+          <li>Save the transaction hash as proof of payment.</li>
+        </ol>
+      </div>
+
+      <p class="pay-warning">⚠ Always verify the network and address. PayLink does not hold funds and cannot reverse transfers.</p>
+    </div>
+
+    <p class="pay-footer">Generated with <a href="index.html">PayLink</a></p>
+  </main>
+
+  <script src="pay.js"></script>
+</body>
+</html>
