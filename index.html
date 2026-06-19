@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CobroLink — Página de cobro USDT en 30 segundos</title>
+  <meta name="description" content="Genera links de pago profesionales para USDT (ERC20). Gratis, sin registro, listo para compartir.">
+  <meta property="og:title" content="CobroLink — Cobra en USDT con un link">
+  <meta property="og:description" content="Generador gratis de páginas de cobro USDT (ERC20). Sin registro.">
+  <meta property="og:url" content="https://gonner22.github.io/cobrolink/">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">Cobro<span>Link</span></a>
+    <nav>
+      <a href="servicios.html">Contratar</a>
+      <a href="#generador" class="nav-cta">Crear cobro</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Emprende sin banco · ERC20</p>
+      <h1>Cobra en USDT con un link que <em>se ve profesional</em></h1>
+      <p class="hero-sub">Genera una página de pago en segundos. Compártela por WhatsApp, Telegram o email. Tu cliente escanea el QR y paga.</p>
+      <div class="hero-actions">
+        <a href="#generador" class="btn btn-primary">Crear mi link gratis</a>
+        <a href="servicios.html" class="btn btn-ghost">Ver servicios desde 10 USDT</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>0 €</strong><span>coste inicial</span></div>
+        <div><strong>30 s</strong><span>para publicar</span></div>
+        <div><strong>USDT</strong><span>Ethereum mainnet</span></div>
+      </div>
+    </section>
+
+    <section id="generador" class="generator">
+      <div class="generator-card">
+        <h2>Generador de cobro</h2>
+        <form id="payment-form">
+          <label>
+            <span>Título del cobro</span>
+            <input type="text" id="title" placeholder="Ej: Logo para startup" maxlength="80" required>
+          </label>
+          <label>
+            <span>Descripción (opcional)</span>
+            <textarea id="description" rows="2" placeholder="Detalle breve para tu cliente" maxlength="200"></textarea>
+          </label>
+          <div class="form-row">
+            <label>
+              <span>Monto</span>
+              <input type="number" id="amount" min="0.01" step="0.01" placeholder="10.00" required>
+            </label>
+            <label>
+              <span>Moneda</span>
+              <select id="currency" disabled>
+                <option value="USDT">USDT (ERC20)</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            <span>Tu wallet Ethereum (solo dirección pública)</span>
+            <input type="text" id="address" pattern="^0x[a-fA-F0-9]{40}$" placeholder="0x..." required>
+          </label>
+          <button type="submit" class="btn btn-primary btn-full">Generar página de cobro</button>
+        </form>
+      </div>
+
+      <div id="result" class="result hidden">
+        <p class="result-label">Tu link está listo</p>
+        <div class="result-url">
+          <input type="text" id="share-url" readonly>
+          <button type="button" id="copy-link" class="btn btn-secondary">Copiar</button>
+        </div>
+        <a id="preview-link" href="#" target="_blank" class="btn btn-ghost">Abrir vista previa →</a>
+        <div class="share-tips">
+          <h3>Cómo conseguir tu primer pago</h3>
+          <ol>
+            <li>Publica el link en <strong>r/slavelabour</strong> o <strong>r/forhire</strong> ofreciendo un micro-trabajo concreto.</li>
+            <li>Comparte en grupos de Telegram/Discord de freelancers crypto.</li>
+            <li>Ofrece algo específico: "Landing page en 24h — 10 USDT".</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="ideas">
+      <h2>Ideas para ganar tus primeros 10 USDT</h2>
+      <div class="idea-grid">
+        <article>
+          <span class="idea-tag">Rápido</span>
+          <h3>Micro-gig en Reddit</h3>
+          <p>Traducción EN↔ES, revisión de CV, configuración de MetaMask, deploy en Vercel. Precio fijo 10 USDT.</p>
+        </article>
+        <article>
+          <span class="idea-tag">Recurrente</span>
+          <h3>Página de cobro para otros</h3>
+          <p>Cobra 10–25 USDT por configurar CobroLink personalizado a freelancers que cobran en crypto.</p>
+        </article>
+        <article>
+          <span class="idea-tag">Escalable</span>
+          <h3>Plantilla + tutorial</h3>
+          <p>Vende un pack Notion/PDF "Cómo cobrar en USDT sin PayPal" en comunidades latinoamericanas.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>CobroLink · Herramienta gratuita · Sin custodia de fondos · Solo genera links</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
